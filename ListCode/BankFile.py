@@ -38,7 +38,7 @@ class Bank:
         self.transaction.append(amount)
 
     def withdraw(self, amount):
-        if amount >= self.balance :
+        if amount <= self.balance :
             print(f"Removing money {amount} from current balance {self.balance}")
             self.balance = self.balance - amount
             with open(f"{self.accountnumber}.txt", "r+") as  withdrawentry:
